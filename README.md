@@ -39,6 +39,22 @@ Flags combine freely, e.g.:
 ./bash-qol --omb=non-interactive --theme=agnoster --demo
 ```
 
+## Quick Start
+
+```bash
+git clone https://github.com/rebootless/bash-qol.git && \
+cd bash-qol && chmod +x bash-qol.sh &&\
+./bash-qol
+```
+
+Interactive oh-my-bash setup:
+
+```bash
+git clone https://github.com/rebootless/bash-qol.git && \
+cd bash-qol && chmod +x bash-qol.sh &&\
+./bash-qol --omb=interactive --demo
+```
+
 Rules:
 - `--theme` is only valid together with `--omb=non-interactive`.
 - `--omb=non-interactive` requires `--theme=NAME`.
