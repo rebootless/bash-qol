@@ -11,7 +11,7 @@ eza). No aliases. Optionally installs [oh-my-bash](https://github.com/ohmybash/o
 
 ## Structure
 
-```
+```text
 bash-qol/
 ├── bash-qol             # entry point: flag parsing + orchestration
 ├── requirements.sh      # apt: bash-completion, fzf, zoxide, ripgrep, bat, eza, chafa, git
@@ -25,7 +25,7 @@ bash-qol/
 
 ## Usage
 
-```
+```text
 ./bash-qol                                     # packages, ~/.bashrc, and ~/.inputrc
 ./bash-qol --omb=interactive                   # + oh-my-bash, chafa theme picker
 ./bash-qol --omb=non-interactive --theme=NAME  # + oh-my-bash, no prompts
@@ -35,7 +35,7 @@ bash-qol/
 
 Flags combine freely, e.g.:
 
-```
+```bash
 ./bash-qol --omb=non-interactive --theme=agnoster --demo
 ```
 
