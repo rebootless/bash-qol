@@ -43,7 +43,7 @@ Flags combine freely, e.g.:
 
 ```bash
 git clone https://github.com/rebootless/bash-qol.git && \
-cd bash-qol && chmod +x bash-qol.sh &&\
+cd bash-qol && chmod +x bash-qol &&\
 ./bash-qol
 ```
 
@@ -51,7 +51,7 @@ Interactive oh-my-bash setup:
 
 ```bash
 git clone https://github.com/rebootless/bash-qol.git && \
-cd bash-qol && chmod +x bash-qol.sh &&\
+cd bash-qol && chmod +x bash-qol &&\
 ./bash-qol --omb=interactive --demo
 ```
 
