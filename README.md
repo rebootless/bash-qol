@@ -1,8 +1,8 @@
 # Bash-QOL
 
 Shell quality-of-life setup for Bash: history, completion, keybindings,
-zoxide/fzf hooks, and modern CLI tools (ripgrep, bat, eza). No aliases.
-Optionally installs oh-my-bash.
+shopt options, zoxide/fzf integration, and modern CLI tools (ripgrep, bat,
+eza). No aliases. Optionally installs oh-my-bash.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Bash](https://img.shields.io/badge/Bash-5.0%2B-4EAA25?logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
@@ -17,16 +17,16 @@ bash-qol/
 ├── requirements.sh      # apt: bash-completion, fzf, zoxide, ripgrep, bat, eza, chafa, git
 ├── lib/
 │   ├── paths.sh         # shared path/marker constants
-│   ├── shell-config.sh  # ~/.bashrc + ~/.inputrc (history/completion/keybindings/shopt)
+│   ├── shell-config.sh  # ~/.bashrc + ~/.inputrc (history, completion, keybindings, shopt)
 │   ├── omb.sh           # oh-my-bash: manual install + theme (interactive or by name)
-│   └── demo.sh          # showcase of eza/bat/ripgrep + interactive features
+│   └── demo.sh          # showcase of eza, bat, ripgrep, and interactive features
 └── README.md
 ```
 
 ## Usage
 
 ```
-./bash-qol                                     # packages + ~/.bashrc + ~/.inputrc
+./bash-qol                                     # packages, ~/.bashrc, and ~/.inputrc
 ./bash-qol --omb=interactive                   # + oh-my-bash, chafa theme picker
 ./bash-qol --omb=non-interactive --theme=NAME  # + oh-my-bash, no prompts
 ./bash-qol --demo                              # + showcase as a final step
@@ -45,20 +45,20 @@ Rules:
 - Unknown theme names fail with the actual list of themes shipped in
   `~/.oh-my-bash/themes`.
 
-## oh-my-bash integration
+## oh-my-bash Integration
 
-Only the "manual" integration is supported: oh-my-bash is git-cloned to
+Only the manual integration is supported: oh-my-bash is git-cloned to
 `~/.oh-my-bash`, and a small block is **prepended to the top** of
-`~/.bashrc` — nothing else in the file is touched. There is no official
-upstream-installer mode, since that replaces `~/.bashrc` wholesale.
+`~/.bashrc` — nothing else in the file is touched. The official installer
+is intentionally not used because it replaces `~/.bashrc` wholesale.
 
 ## Idempotency
 
 Re-running is always safe:
 - `requirements.sh` — `apt-get install` no-ops on installed packages.
-- `~/.bashrc` managed blocks (`# >>> bash-qol >>>` / `# >>> oh-my-bash >>>`)
-  are replaced, not duplicated; each write backs up the previous file as
-  `~/.bashrc.bak.<timestamp>`.
+- Managed blocks in `~/.bashrc` (`# >>> bash-qol >>>` / `# >>> oh-my-bash >>>`)
+  are replaced, not duplicated. Before each update, the previous file is
+  backed up as `~/.bashrc.bak.<timestamp>`.
 - `~/.inputrc` is replaced outright, with the same backup pattern.
 
 ## License
