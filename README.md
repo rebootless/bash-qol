@@ -2,7 +2,7 @@
 
 Shell quality-of-life setup for Bash: history, completion, keybindings,
 shopt options, zoxide/fzf integration, and modern CLI tools (ripgrep, bat,
-eza). No aliases. Optionally installs oh-my-bash.
+eza). No aliases. Optionally installs [oh-my-bash](https://github.com/ohmybash/oh-my-bash).
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Bash](https://img.shields.io/badge/Bash-5.0%2B-4EAA25?logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
@@ -63,7 +63,7 @@ Rules:
 
 ## oh-my-bash Integration
 
-Only the manual integration is supported: oh-my-bash is git-cloned to
+Only the manual integration is supported: [oh-my-bash](https://github.com/ohmybash/oh-my-bash) is git-cloned to
 `~/.oh-my-bash`, and a small block is **prepended to the top** of
 `~/.bashrc` — nothing else in the file is touched. The official installer
 is intentionally not used because it replaces `~/.bashrc` wholesale.
