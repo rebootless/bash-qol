@@ -27,11 +27,11 @@ run_demo() {
     sleep 1
 
     echo -e "\n${c_green}>>> 1. EZA (a modern replacement for ls) ${c_reset}"
-    echo -e "${c_mag}\$ eza -lah --icons project/${c_reset}"
-    eza -lah --icons project/
+    echo -e "${c_mag}\$ eza -lah --icons=auto project/${c_reset}"
+    eza -lah --icons=auto project/
     echo ""
-    echo -e "${c_mag}\$ eza --tree --icons project/${c_reset}"
-    eza --tree --icons project/
+    echo -e "${c_mag}\$ eza --tree --icons=auto project/${c_reset}"
+    eza --tree --icons=auto project/
 
     read -n 1 -s -r -p "Press any key to continue..."
     echo ""
