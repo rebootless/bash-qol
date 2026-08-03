@@ -89,7 +89,7 @@ apply_omb_theme() {
 
     {
         echo "$MARK_START_OMB"
-        echo "export OSH=\"$OSH\""
+        echo 'export OSH="$HOME/.oh-my-bash"'
         echo "OSH_THEME=\"$theme\""
         echo "source \"\$OSH/oh-my-bash.sh\""
         echo "$MARK_END_OMB"
